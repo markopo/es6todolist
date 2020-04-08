@@ -1,0 +1,212 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #222;
+    font-size: .85rem;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+input[type=text] {
+    height: 3rem;
+    padding: .3rem .6rem;
+    background-color: #fff;
+    border: 1px solid #D1D1D1;
+    border-radius: .25rem;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-size: 1.25rem;
+}
+
+button {
+    display: inline-block;
+    padding: 0 2rem;
+    color: #555;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: .25rem;
+    border: 1px solid #bbb;
+}
+
+
+.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#app {
+   width: 100%;
+}
+
+.app-title {
+    margin: 0;
+    padding: 1rem 0;
+    color: white;
+    background: #ff33b3;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-title button {
+    margin: 0 0 0 .5rem;
+    border: 1px solid #bbb;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    background: #fff;
+    border-radius: .25rem;
+}
+
+.app-list-container {
+    padding: .5rem 0;
+    margin: 0;
+    list-style: none;
+}
+
+.app-list-container .list-item {
+    margin: .2rem 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e3e5e7;
+}
+
+.app-list-container .list-item .list-item__title {
+    font-size: 1.5rem;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 70%;
+}
+
+.app-list-container .list-item .list-item__title.is-checked {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.app-list-container .list-item .list-item__linkscontainer {
+    margin-left: .2rem;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-list-container .list-item .list-item__linkscontainer * {
+    margin: 0 .25rem;
+}
+
+.app-list-container .list-item a.list-item__deletelink:hover {
+    color: #00f;
+}
+
+@media all and (min-width: 768px) {
+
+    #app {
+        margin: 0 auto;
+        max-width: 65rem;
+    }
+
+    #app-add-form {
+        margin: 0 auto;
+        max-width: 65rem;
+    }
+}
+
+#app-add-form {
+    position: fixed;
+    z-index: 100;
+    background: #fff;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.add-form-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    color: white;
+    background: #ff33b3;
+}
+
+#app-add-form .app-add-form__title {
+    margin: 0 .5rem;
+    padding: 0;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+#app-add-form .add-form-close {
+    margin: 0 1rem;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+#app-add-form.hide {
+    display: none;
+}
+
+#app-add-form.show {
+    display: block;
+}
+
+#app-add-form .form-row {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#app-add-form .form-row label, button {
+    padding: .5rem 0;
+}
+
+
